@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block body_block %}
+
+<div class="jumbotron">
+<form  method="POST">
+{% csrf_token %}
+<label for="URL">URL:</label>
+<input type="text" name="URL" placeholder="Enter URL here">
+<input type="submit" name="" value="Submit">
+</form>   
+
+{{ message|linebreaks }}
+
+</div>
+
+{% endblock %}
+
